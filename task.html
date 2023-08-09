@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="task.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Responsive Footer</title>
+</head>
+<body>
+  <div class="curved-section">
+    <div class="curve"></div>
+    <div class="curveleft"></div>
+  </div>
+  <div class="slider10-container">
+    <div class="slider10">
+      <div class="slide10">
+        <h2>👤User123</h2>
+        <p>Collection of hand-picked free HTML and CSS contact form code examples
+           from CodePen, GitHub and other resources. Update of November 2021 collection. One new item.</p>
+      </div>
+      <div class="slide10">
+        <h2>👤User123</h2>
+        <p>Collection of hand-picked free HTML and CSS contact form code
+           examples from CodePen, GitHub and other resources. Update of November 2021 collection. One new item.</p>
+      </div>
+      <div class="slide10">
+        <h2>👤User123</h2>
+        <p>Collection of hand-picked free HTML and CSS contact form code examples
+           from CodePen, GitHub and other resources. Update of November 2021 collection. One new item.</p>
+      </div>
+      <div class="slide10">
+        <h2>👤User123</h2>
+        <p>TCollection of hand-picked free HTML and CSS contact form code examples
+           from CodePen, GitHub and other resources. Update of November 2021 collection. One new item.</p>
+      </div>
+      <div class="slide10">
+        <h2>👤User123</h2>
+        <p>Collection of hand-picked free HTML and CSS contact form code examples 
+          from CodePen, GitHub and other resources. Update of November 2021 collection. One new item.</p>
+      </div>
+    </div>
+    <button class="arrow arrow-right"><i class='bx bxs-right-arrow-circle'></i></button>
+  </div>
+   <footer class="footer">
+        <div class="section white-section">
+            <div class="brand">
+                <img src="logo.png" alt="Company Logo">
+                <h1>Food Lab</h1>
+            </div>
+            <p class="contact-info">203 Abc road, xyz</p>
+            <p class="contact-info"><b>Phone:</b> +1 (123) 456-7890</p>
+            <p class="contact-info"><b>Email:</b> admin@parikshan.net.in</p>
+        </div>
+        <div class="section orange-section">
+            <div class="contain">
+                <div class="col">
+                  <h1 class="title">Company</h1>
+                  <ul>
+                    <li>Home</li>
+                    <li>Service</li>
+                    <li>Training Registration</li>
+                    <li>Social</li>
+                    <li>Get in touch</li>
+                    <li>About</li>
+                    <li>Mission</li>
+                    <li>Services</li>
+                    
+                  </ul>
+                </div>  
+                <div class="col">
+                  <h1></h1>
+                  <ul>
+                    <li>Contact us</li>
+                    <li>Web chat</li>
+                    <li>Open ticket</li>
+                  </ul>
+                </div>
+                <div class="col">
+                    <h1>Support</h1>
+                    <ul>
+                      <li>Contact us</li>
+                      <li>Web chat</li>
+                      <li>Open ticket</li>
+                    </ul>
+                  </div>
+            </div>
+            <div class="legal"> 
+                <p>Food Labs Inc. &copy; 2022 . All rights reserved.</p>
+           </div>
+        </div>
+    </footer>
+
+    <script>
+      const slider = document.querySelector(".slider");
+      const arrowLeft = document.querySelector(".arrow-left");
+      const arrowRight = document.querySelector(".arrow-right");
+      let currentSlide = 0;
+  
+      arrowLeft.addEventListener("click", () => {
+        if (currentSlide > 0) {
+          currentSlide--;
+          updateSliderPosition();
+        }
+      });
+  
+      arrowRight.addEventListener("click", () => {
+        if (currentSlide < Math.floor(slider.children.length / 3)) {
+          currentSlide++;
+          updateSliderPosition();
+        }
+      });
+      function updateSliderPosition() {
+      const slideWidth = slider.clientWidth / 3;
+      slider.style.transform = `translateX(-${currentSlide * slideWidth}px)`;
+    }
+  </script>
+</body>
+</html>
